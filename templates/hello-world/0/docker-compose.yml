@@ -19,4 +19,3 @@ services:
             io.rancher.container.start_once: 'true'
         volumes:
             - /var/www/html
-        entrypoint: /bin/true
