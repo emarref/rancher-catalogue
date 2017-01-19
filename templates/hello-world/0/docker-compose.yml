@@ -2,11 +2,10 @@ version: '2'
 services:
     app:
         image: php:7-apache
-        ports:
-        - "${public_port}:80"
-        restart: always
         tty: true
         stdin_open: true
+        ports:
+        - "${public_port}:80"
         volumes_from:
             - app-data:ro
         labels:
@@ -14,8 +13,10 @@ services:
             io.rancher.sidekicks: app-data
     app-data:
         image: emarref/hello-world
+        tty: true
+        stdin_open: true
+        volumes:
+            - /var/www/html
         labels:
             io.rancher.container.hostname_override: container_name
             io.rancher.container.start_once: 'true'
-        volumes:
-            - /var/www/html
