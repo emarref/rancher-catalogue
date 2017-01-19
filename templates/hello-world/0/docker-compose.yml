@@ -7,7 +7,8 @@ services:
         restart: always
         tty: true
         stdin_open: true
-        volumes_from: app-data
+        volumes_from:
+        - app-data
         labels:
             io.rancher.container.hostname_override: container_name
             io.rancher.sidekicks: app-data
