@@ -1,0 +1,4 @@
+name: Hello World
+description: Hello World displayed by PHP and Apache.
+version: 1
+category: Test

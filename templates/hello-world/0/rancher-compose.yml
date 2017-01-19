@@ -1,0 +1,12 @@
+version: '2'
+catalog:
+  name: Hello World
+  version: 1
+  description: Hello World displayed by PHP and Apache.
+  questions:
+  - variable: public_port
+    label: Public port
+    description: Port on which Apache should listen
+    default: 80
+    required: true
+    type: int
