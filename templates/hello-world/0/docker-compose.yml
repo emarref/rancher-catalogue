@@ -15,8 +15,6 @@ services:
     image: emarref/hello-world
     tty: true
     stdin_open: true
-    volumes:
-    - /var/www/html
     labels:
       io.rancher.container.hostname_override: container_name
       io.rancher.container.start_once: 'true'
