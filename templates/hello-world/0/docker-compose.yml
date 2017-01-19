@@ -7,7 +7,7 @@ services:
     ports:
     - "${public_port}:80"
     volumes_from:
-    - app-data:ro
+    - app-data
     labels:
       io.rancher.container.hostname_override: container_name
       io.rancher.sidekicks: app-data
