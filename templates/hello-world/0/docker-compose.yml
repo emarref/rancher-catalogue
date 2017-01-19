@@ -8,7 +8,7 @@ services:
         tty: true
         stdin_open: true
         volumes_from:
-        - app-data:ro
+            - app-data:ro
         labels:
             io.rancher.container.hostname_override: container_name
             io.rancher.sidekicks: app-data
@@ -17,5 +17,5 @@ services:
         labels:
             io.rancher.container.start_once: 'true'
         volumes:
-        - /var/www/html
-        command: /bin/true
+            - /var/www/html
+        entrypoint: /bin/true
