@@ -1,4 +1,4 @@
 name: Hello World
 description: Hello World displayed by PHP and Apache.
-version: 0.0.1
+version: "v0.0.1"
 category: Test
