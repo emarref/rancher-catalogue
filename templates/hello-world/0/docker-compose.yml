@@ -8,9 +8,11 @@ services:
         tty: true
         stdin_open: true
         volumes_from:
-        - app-data
+        - app-data:ro
         labels:
             io.rancher.container.hostname_override: container_name
             io.rancher.sidekicks: app-data
     app-data:
         image: emarref/hello-world
+        volumes:
+        - /var/www/html
