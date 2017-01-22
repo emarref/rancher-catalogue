@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: emarref/hello-redis
+    tty: true
+    stdin_open: true
+    ports:
+    - "${public_port}:80"
+  redis:
+    image: redis

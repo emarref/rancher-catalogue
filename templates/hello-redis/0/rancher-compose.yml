@@ -1,0 +1,12 @@
+version: '2'
+catalog:
+  name: Hello Redis
+  version: "v0.0.1"
+  description: Counter using PHP and redis.
+  questions:
+  - variable: public_port
+    label: Public port
+    description: Port on which Apache should listen
+    default: 80
+    required: true
+    type: int

@@ -1,0 +1,4 @@
+name: Hello Redis
+description: Counter using PHP and redis.
+version: "v0.0.1"
+category: Test
