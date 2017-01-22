@@ -1,0 +1,5 @@
+version: '2'
+catalog:
+  name: Hello World
+  version: "v0.0.3"
+  description: Hello World displayed by PHP and Apache.
