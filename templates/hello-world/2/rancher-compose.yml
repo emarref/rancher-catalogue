@@ -1,0 +1,26 @@
+version: '2'
+catalog:
+  name: Hello World
+  version: "v0.0.4"
+  description: Hello World displayed by PHP and Apache.
+  questions:
+  - variable: public_port
+    label: Public port
+    description: Port on which Apache should listen
+    default: 80
+    required: true
+    type: int
+services:
+  hello-world-lb:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: ${public_port}
+        target_port: 80
+        service: app
+    health_check:
+      port: 80
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
