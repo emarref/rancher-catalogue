@@ -1,6 +1,6 @@
 version: '2'
 services:
-  hello-world-lb:
+  app-lb:
     ports:
     - ${public_port}
     image: rancher/lb-service-haproxy

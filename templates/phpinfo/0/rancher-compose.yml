@@ -11,7 +11,7 @@ catalog:
     required: true
     type: int
 services:
-  hello-world-lb:
+  app-lb:
     scale: 1
     lb_config:
       port_rules:
