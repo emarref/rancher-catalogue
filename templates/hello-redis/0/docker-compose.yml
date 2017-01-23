@@ -1,10 +1,10 @@
 version: '2'
 services:
+  app-lb:
+    ports:
+    - ${public_port}
+    image: rancher/lb-service-haproxy
   app:
     image: emarref/hello-redis
-    tty: true
-    stdin_open: true
-    ports:
-    - "${public_port}:80"
   redis:
     image: redis

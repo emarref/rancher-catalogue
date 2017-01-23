@@ -10,3 +10,17 @@ catalog:
     default: 80
     required: true
     type: int
+services:
+  app-lb:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: ${public_port}
+        target_port: 80
+        service: app
+    health_check:
+      port: 80
+      interval: 2000
+      unhealthy_threshold: 3
+      healthy_threshold: 2
+      response_timeout: 2000
