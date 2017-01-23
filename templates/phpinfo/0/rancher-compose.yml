@@ -1,8 +1,8 @@
 version: '2'
 catalog:
-  name: Hello World
-  version: "v0.0.4"
-  description: Hello World displayed by PHP and Apache.
+  name: PHP Info
+  version: "v0.0.1"
+  description: A simple container displaying `phpinfo()` output.
   questions:
   - variable: public_port
     label: Public port

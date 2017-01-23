@@ -1,0 +1,8 @@
+version: '2'
+services:
+  hello-world-lb:
+    ports:
+    - ${public_port}
+    image: rancher/lb-service-haproxy
+  app:
+    image: emarref/phpinfo

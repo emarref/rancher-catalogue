@@ -1,0 +1,4 @@
+name: PHP Info
+description: A simple container displaying `phpinfo()` output.
+version: "v0.0.1"
+category: Test
